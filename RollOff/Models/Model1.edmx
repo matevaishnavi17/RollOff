@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ROLLOFFModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Rolloff">
+          <Key>
+            <PropertyRef Name="Employee no" />
+          </Key>
+          <Property Name="Country" Type="nvarchar" MaxLength="255" />
+          <Property Name="Global Group ID" Type="float" />
+          <Property Name="Employee no" Type="float" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Local Grade" Type="nvarchar" MaxLength="255" />
+          <Property Name="Main Client" Type="nvarchar" MaxLength="255" />
+          <Property Name="Email" Type="nvarchar" MaxLength="255" />
+          <Property Name="Joining Date" Type="datetime" />
+          <Property Name="Project Code" Type="float" />
+          <Property Name="Project Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="Project Start Date" Type="datetime" />
+          <Property Name="Project End Date" Type="datetime" />
+          <Property Name="People Manager (Performance Reviewer)" Type="nvarchar" MaxLength="255" />
+          <Property Name="Practice" Type="nvarchar" MaxLength="255" />
+          <Property Name="PSP Name" Type="nvarchar" MaxLength="255" />
+          <Property Name="New Global Practice" Type="nvarchar" MaxLength="255" />
+          <Property Name="Office City" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityContainer Name="ROLLOFFModelStoreContainer">
+          <EntitySet Name="Rolloff" EntityType="Self.Rolloff" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ROLLOFFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Rolloff">
+          <Key>
+            <PropertyRef Name="Employee_no" />
+          </Key>
+          <Property Name="Country" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Global_Group_ID" Type="Double" />
+          <Property Name="Employee_no" Type="Double" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Local_Grade" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Main_Client" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Joining_Date" Type="DateTime" Precision="3" />
+          <Property Name="Project_Code" Type="Double" />
+          <Property Name="Project_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Project_Start_Date" Type="DateTime" Precision="3" />
+          <Property Name="Project_End_Date" Type="DateTime" Precision="3" />
+          <Property Name="People_Manager__Performance_Reviewer_" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Practice" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="PSP_Name" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="New_Global_Practice" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Office_City" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ROLLOFFEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Rolloffs" EntityType="Self.Rolloff" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ROLLOFFModelStoreContainer" CdmEntityContainer="ROLLOFFEntities1">
+          <EntitySetMapping Name="Rolloffs">
+            <EntityTypeMapping TypeName="ROLLOFFModel.Rolloff">
+              <MappingFragment StoreEntitySet="Rolloff">
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="Global_Group_ID" ColumnName="Global Group ID" />
+                <ScalarProperty Name="Employee_no" ColumnName="Employee no" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Local_Grade" ColumnName="Local Grade" />
+                <ScalarProperty Name="Main_Client" ColumnName="Main Client" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Joining_Date" ColumnName="Joining Date" />
+                <ScalarProperty Name="Project_Code" ColumnName="Project Code" />
+                <ScalarProperty Name="Project_Name" ColumnName="Project Name" />
+                <ScalarProperty Name="Project_Start_Date" ColumnName="Project Start Date" />
+                <ScalarProperty Name="Project_End_Date" ColumnName="Project End Date" />
+                <ScalarProperty Name="People_Manager__Performance_Reviewer_" ColumnName="People Manager (Performance Reviewer)" />
+                <ScalarProperty Name="Practice" ColumnName="Practice" />
+                <ScalarProperty Name="PSP_Name" ColumnName="PSP Name" />
+                <ScalarProperty Name="New_Global_Practice" ColumnName="New Global Practice" />
+                <ScalarProperty Name="Office_City" ColumnName="Office City" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
